@@ -1,0 +1,118 @@
+* {
+    
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #0C1A2F; /*color del fondo F0F8FF porsi lo borro otravez...*/
+}
+
+.table-container {
+    display: flex;
+    position: relative; 
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    perspective: 1000px;
+    align-items: stretch;
+    max-width: 2000px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    min-height: 450px;
+    border: 1px #f1f1f1;
+    perspective: 1000px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    display: flex;
+}
+
+.table-container {
+    align-items: stretch; /* Esto fuerza a todos los hijos a misma altura */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg)
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.flip-card-front {
+    background-color: #6488A8 ; /* Color de fondo para la cara frontal */
+    color: 1A2B3C;
+}
+
+.flip-card-back {
+
+    background-color: #3A5C7F ; /* Color de fondo para la cara trasera */
+    color: #1A2B3C ;
+    transform: rotateY(180deg); /* Inicialmente rota 180 grados para que no sea visible */
+    justify-content: flex-start;
+    padding-top: 30px;
+}
+
+
+.flip-card-front h3 {
+    margin-bottom: 10px;
+}
+
+.flip-card-back h4 {
+    text-decoration: underline;
+    margin-bottom: 10px;
+    color: #ffff;
+}
+
+.flip-card-back p {
+    color: #d3d3d3;
+    font-size: 0.85em; /* overflow-wrap: break-word; sirve para lo mismo, no? pero aja.. el correo se seguia desbordado */
+    word-break: break-word; /* en un inicio habia puesto "break-all" pero eso literalmente rompia cada palabra en secciones */
+}
+
+.flip-card-front img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+p {
+  letter-spacing: 0.1em; /* Separa las letras ligeramente */
+}
+
+h1 {
+  letter-spacing: -0.05em; /* Junta las letras ligeramente */
+}
