@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★Bienvenido★</title>
+    <link rel="stylesheet" href="../css/stylesLogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login_cont">
+
+        <h2 class="titulo">🌌Bienvenido🌌 pero... NO ROMPAS NADA!</h2>
+        <form id="LoginForm" class="LoginForm">
+            <label for="nombre" class="loginlabel">Ingresar Usuario:</label><br>
+            <input type="text" id="username" name="name" class="text" placeholder="User"><br>
+            <label for="pass" class="loginlabel">Ingresar Contraseña</label><br>
+            <input type="password" id="password" name="pass" class="text" placeholder="Password"><br>
+            <button type="submit" class="botonlogin">Ingresar</button>
+        </form>
+        <p id="message" class="Login-error"></p>
+        <p id="welcome-message"></p>
+
+    </div>
+
+    <script src="../Js/LogicaLogin.js"></script>
+    
+</html>
